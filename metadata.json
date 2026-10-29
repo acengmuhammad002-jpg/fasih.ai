@@ -1,0 +1,6 @@
+{
+  "name": "Fasih.ai - Adaptive English AI",
+  "description": "Aplikasi belajar Bahasa Inggris adaptif cerdas dengan placement test, simulasi roleplay bertingkat, mode suara, sandbox, dan vocab vault.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

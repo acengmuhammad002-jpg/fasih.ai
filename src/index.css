@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f0f7ff;
+    color: #1e293b;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+.font-bubbly {
+  font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 3D Tactile Buttons inspired by language apps */
+.btn-3d {
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.15s ease;
+  user-select: none;
+}
+
+.btn-3d:active {
+  transform: translateY(3px);
+}
+
+.btn-3d-green {
+  background-color: #58cc02;
+  border-bottom: 4px solid #46a302;
+  color: white;
+}
+.btn-3d-green:hover {
+  filter: brightness(1.05);
+}
+.btn-3d-green:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.btn-3d-blue {
+  background-color: #1cb0f6;
+  border-bottom: 4px solid #1899d6;
+  color: white;
+}
+.btn-3d-blue:hover {
+  filter: brightness(1.05);
+}
+.btn-3d-blue:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.btn-3d-orange {
+  background-color: #ff9600;
+  border-bottom: 4px solid #d97f00;
+  color: white;
+}
+.btn-3d-orange:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.btn-3d-purple {
+  background-color: #ce82ff;
+  border-bottom: 4px solid #a855f7;
+  color: white;
+}
+.btn-3d-purple:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.btn-3d-white {
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-bottom: 4px solid #d1d5db;
+  color: #374151;
+}
+.btn-3d-white:active {
+  border-bottom-width: 2px;
+  transform: translateY(2px);
+}
+
+/* Soft speech bubble pointer */
+.speech-bubble-left {
+  position: relative;
+}
+.speech-bubble-left::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 24px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 14px solid white;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
